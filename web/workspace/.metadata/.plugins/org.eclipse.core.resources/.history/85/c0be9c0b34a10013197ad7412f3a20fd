@@ -1,0 +1,30 @@
+
+<%
+	String cookieName = "cookie_idioma";
+	Cookie cookies[] = request.getCookies();
+	Cookie myCookie = null;
+	if (cookies != null) {
+		for (int i = 0; i < cookies.length; i++) {
+			if (cookies[i].getName().equals(cookieName)) {
+				myCookie = cookies[i];
+				break;
+			}
+		}
+	}
+	
+	if(myCookie == null){
+		
+	}
+%>
+<div class="encabezado">
+	<div class="texto_encabezado">
+		<div class="titulo_encabezado">CATALOGO MT</div>
+		<div class="subtitulo_encabezado">Consola Administrativa</div>
+	</div>
+	<div class="select_idiomas">
+		<select id="select_idioma">
+			<option></option>
+
+		</select>
+	</div>
+</div>

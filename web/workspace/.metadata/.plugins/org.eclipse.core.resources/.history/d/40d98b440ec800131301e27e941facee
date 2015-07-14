@@ -1,0 +1,117 @@
+<%@page import="modelo.Caracteristica"%>
+<%@page import="modelo.ArchivoGrupoEquipo"%>
+<%@page import="java.util.List"%>
+<%@page import="modelo.GrupoEquipo"%>
+<%@page import="modelo.Usuario"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@page import="modelo.utils.Traductor"%>
+<%@include file="plantillas/obj_idioma.jsp"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title><%=traductor.traducir("agregar_producto")%></title>
+<link type="text/css" rel="StyleSheet"
+	href="../css/plantillas/encabezado.css">
+<link type="text/css" rel="StyleSheet"
+	href="../css/plantillas/botonera_principal.css">
+<link type="text/css" rel="StyleSheet"
+	href="../css/plantillas/ubicacion.css">
+<link type="text/css" rel="StyleSheet" href="../css/utils/errores.css">
+
+<script type="text/javascript" src="../js/utils/utils.js"></script>
+<script type="text/javascript" src="../js/utils/cookies.js"></script>
+<script type="text/javascript" src="../js/plantillas/idioma_pais.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+
+<script type="text/javascript" src="../js/ajax/set_idioma_pais_ajax.js"></script>
+
+<%@include file="scripts/validaciones.jsp"%>
+</head>
+<body>
+	<%
+		Usuario usuario = (Usuario) session.getAttribute("usuario");
+	%>
+	<%
+		GrupoEquipo grupoEquipo = (GrupoEquipo) session
+				.getAttribute("grupoEquipo");
+	%>
+	<%@include file="plantillas/encabezado.jsp"%>
+	<%@include file="plantillas/botonera_principal.jsp"%>
+	<div id="cuerpo">
+		<div>
+			<span class="ubicacion"><b><%=traductor.traducir("home")%></b></span>
+			<div class="grupo_equipos">
+				<b><%=traductor.traducir("grupo_de_equipos")%>:</b>
+				<%=grupoEquipo.getNombre()%></div>
+		</div>
+		<!-- <center>  -->
+		<div style="text-align:center">
+			<h2><%=traductor.traducir("mensaje_agregar_producto")%></h2>
+
+			<table>
+				<tr>
+					<th>Logo:</th>
+					<td><input type="file" name="logo_norquerido">
+						<div class="list_img">
+							<table>
+								<%
+									List<ArchivoGrupoEquipo> archivoGrupoEquipos = grupoEquipo
+											.getArchivoGrupoEquipoPorTipoArchivo(new String[] { "img" });
+									for (int i = 0; i < archivoGrupoEquipos.size(); i++) {
+								%>
+								<tr>
+									<th><input type="radio" name="radio_logo"
+										value="<%=archivoGrupoEquipos.get(i).getArchivo().getMd5()%>">
+									</th>
+									<th><img alt="logo1"
+										src="<%=archivoGrupoEquipos.get(i).getArchivo().getRuta()%>"
+										class="logo"></th>
+									<td><%=archivoGrupoEquipos.get(i).getNombreOriginal()%></td>
+								</tr>
+								<%
+									}
+								%>
+							</table>
+						</div></td>
+				</tr>
+				<tr>
+					<th>Nombre:</th>
+					<td><input type="text" name="nombre"></td>
+				</tr>
+				<tr>
+					<th>Descripci&oacute;n:</th>
+					<td><textarea name="descripcion"></textarea></td>
+				</tr>
+				<tr>
+					<th>Caracter&iacute;sticas:</th>
+					<td><a href="javascript:AgregarCaracteristica">Agregar</a> <a
+						href="javascript:QuitarCaracteristica">Quitar</a>
+						<div>
+							<select name="caracteristica">
+								<option value="">Seleccione una Caracteristica</option>
+								<%
+									List<Caracteristica> caracteristicas = Caracteristica
+											.getCaracteristicas();
+									for (int i = 0; i < caracteristicas.size(); i++) {
+								%>
+								<option value="<%=caracteristicas.get(i).getId()%>">
+									<%=caracteristicas.get(i).getNombre()%>
+								</option>
+								<%
+									}
+								%>
+							</select> Valor: <input type="text" name="valor_caracteristica">
+						</div></td>
+				</tr>
+			</table>
+		</div>
+		<!-- </center> -->
+	</div>
+	
+	<script type="text/javascript">
+		htmlContenido
+	</script>
+</body>
+</html>

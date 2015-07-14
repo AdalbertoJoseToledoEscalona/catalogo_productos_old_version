@@ -1,0 +1,109 @@
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.Map"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="modelo.ArchivoGrupoEquipo"%>
+<%@page import="java.util.List"%>
+<%@page import="modelo.GrupoEquipo"%>
+<%@page import="modelo.Usuario"%>
+<%@ taglib uri="/catalogo_productos_consola" prefix="reportes"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@page import="modelo.utils.Traductor"%>
+<%@include file="plantillas/obj_idioma.jsp"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title><%=traductor.traducir("administrar_documentos_productos")%></title>
+<link type="text/css" rel="StyleSheet"
+	href="../css/plantillas/encabezado.css">
+<link type="text/css" rel="StyleSheet"
+	href="../css/plantillas/cuerpo.css">
+<!-- <link type="text/css" rel="StyleSheet" href="../css/home.css"> -->
+<link type="text/css" rel="StyleSheet"
+	href="../css/plantillas/botonera_principal.css">
+<link type="text/css" rel="StyleSheet"
+	href="../css/plantillas/ubicacion.css">
+<link type="text/css" rel="StyleSheet" href="../css/utils/errores.css">
+<link type="text/css" rel="StyleSheet" href="../css/utils/utils.css">
+<link type="text/css" rel="StyleSheet" href="../css/utils/reportes.css">
+
+
+<script type="text/javascript" src="../js/utils/utils.js"></script>
+<script type="text/javascript" src="../js/utils/validaciones.js"></script>
+<script type="text/javascript" src="../js/utils/cookies.js"></script>
+<script type="text/javascript" src="../js/plantillas/idioma_pais.js"></script>
+<script type="text/javascript" src="../js/utils/contenido_dinamico.js"></script>
+<script type="text/javascript" src="../js/utils/reporte.js"></script>
+
+<script type="text/javascript" src="../js/ajax/set_idioma_pais_ajax.js"></script>
+
+<script type="text/javascript" src="../js/ajax/reporte.js"></script>
+
+<%@include file="scripts/utils/validaciones.jsp"%>
+</head>
+<body>
+	<%
+		try {
+			Usuario usuario = (Usuario) session.getAttribute("usuario");
+			
+			GrupoEquipo grupoEquipo = (GrupoEquipo) session
+					.getAttribute("grupoEquipo");
+	%>
+	<%@include file="plantillas/encabezado.jsp"%>
+	<%@include file="plantillas/botonera_principal.jsp"%>
+	<div id="cuerpo">
+		<div>
+			<span class="ubicacion"><a href="home.jsp"><%=traductor.traducir("home")%></a>
+				&gt;&gt; <b><%=traductor.traducir("administrar_documentos_productos")%></b></span>
+			<div class="grupo_equipos">
+				<b><%=traductor.traducir("grupo_de_equipos")%>:</b>
+				<%=grupoEquipo.getNombre()%></div>
+		</div>
+		<div id="error" class="error"></div>
+		<table>
+			<caption><H2>Asociacion de Documentos a Productos</H2></caption>
+			<tr>
+				<td>
+					<div>		
+						<%@include file="plantillas/reporte_listado_archivos.jsp"%>
+					</div>
+				</td>
+				<td>
+					<div>		
+						<%@include file="plantillas/reporte_listado_producto_sencillo.jsp"%>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th colspan="2">
+					<input type="submit" value="asociar">
+					<input type="reset" value="<%=traductor.traducir("reset")%>">
+				</th>
+			</tr>
+		</table>
+		
+			<hr>
+			<% Producto[] productos = Producto.getListaProductos(grupoEquipo.getId());
+		
+			
+			for(int i = 0; i < productos.length; i++){%>
+				
+				<center><h3><%=productos[i].getNombre() %></h3></center>
+				
+			<% } %>
+	</div>
+
+	
+	<%
+		} catch (Exception e) {
+			e.printStackTrace();
+	%>
+	<script type="text/javascript">
+		mostrarMensaje("<%=e.getMessage()%>", true);
+	</script>
+	<%
+		}
+	%>
+</body>
+</html>

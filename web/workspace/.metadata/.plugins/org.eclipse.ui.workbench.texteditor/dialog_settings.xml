@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="487" key="DIALOG_WIDTH"/>
+		<item value="168" key="DIALOG_Y_ORIGIN"/>
+		<item value="434" key="DIALOG_HEIGHT"/>
+		<item value="627" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="attributeAdded" key="selection"/>
+		<list key="findhistory">
+			<item value="attributeAdded"/>
+			<item value="attributeRemoved"/>
+			<item value="idioma_pais"/>
+			<item value="LOCK TABLES `ps_access` WRITE;"/>
+			<item value="pma_column_info"/>
+			<item value="ps_access"/>
+			<item value="FROM `phpmyadmin`.`pma_column_info`"/>
+			<item value="/home/adalberto/Dropbox/proyectos/uwear/db/echarryj_pres865/echarryj_pres865.sql"/>
+		</list>
+		<list key="replacehistory">
+			<item value="finExito"/>
+			<item value="inicioExito"/>
+			<item value="jpeg"/>
+			<item value="getColumnaEncabezado().get(i)"/>
+			<item value="getColumnaEncabezado()et(i)"/>
+			<item value="objDiv"/>
+			<item value="TablaReporte"/>
+			<item value="pageContext.getOut().println"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="358" key="DIALOG_Y_ORIGIN"/>
+		<item value="366" key="DIALOG_X_ORIGIN"/>
+	</section>
+</section>

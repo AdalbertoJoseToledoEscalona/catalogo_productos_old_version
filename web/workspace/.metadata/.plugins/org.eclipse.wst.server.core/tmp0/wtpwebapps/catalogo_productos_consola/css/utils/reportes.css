@@ -1,0 +1,44 @@
+@CHARSET "UTF-8";
+
+.reporte_tabla_filtro{
+	width: 100%;
+	text-align: center;
+}
+
+.reporte_tabla, .reporte_tabla th, .reporte_tabla td{
+	border: 1px solid black;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+.reporte_tabla th{
+	/*white-space: nowrap;*/
+}
+
+.reporte_tabla_encabezado{
+	background-color: #88AAFF;
+}
+
+.reporte_tabla_tr_par{
+	background-color: #AACCFF;
+}
+
+.listado_productosreporte_tabla_tr_par{
+	background-color: #AACCFF;
+}
+
+.reporte_tabla_tr_impar{
+	/*background-color: #AACCFF;*/
+}
+
+.reporte_tabla_flecha_ordenar{
+	width: 20px;
+}
+
+#reporte_tabla_paginas{
+	text-align: center;
+}
+
+.reporte_tabla_url_archivo_img {
+	width: 100px;
+}

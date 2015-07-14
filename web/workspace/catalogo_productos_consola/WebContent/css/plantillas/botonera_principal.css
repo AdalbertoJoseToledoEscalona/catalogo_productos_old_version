@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+.botonera_principal {
+	border-right-color: blue;
+	border-right-style: solid;
+	border-right-width: 1%;
+	position: relative;
+	width: 20%;
+	height: 90%;
+	float: left;
+	overflow: auto;
+}
+
+.usuario_botonera {
+	text-align: center;
+}

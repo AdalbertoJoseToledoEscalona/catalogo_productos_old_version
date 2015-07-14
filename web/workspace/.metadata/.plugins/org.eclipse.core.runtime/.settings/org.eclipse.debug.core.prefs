@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+org.eclipse.debug.core.USE_STEP_FILTERS=false
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="getTipoColumna().get(&\#10;&\#9;&\#9;&\#9;&\#9;&\#9;&\#9;&\#9;&\#9;&\#9;&\#9;&\#9;&\#9;getColumnaEncabezado().get(i))&\#10;&\#9;&\#9;&\#9;&\#9;&\#9;&\#9;&\#9;&\#9;&\#9;&\#9;&\#9;&\#9;.equals(&quot;url_archivo&quot;)"/>\n<expression enabled\="true" text\="tdsDato.get(fila)[i]"/>\n</watchExpressions>\n

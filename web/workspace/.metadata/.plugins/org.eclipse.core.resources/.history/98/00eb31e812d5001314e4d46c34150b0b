@@ -1,0 +1,276 @@
+/**
+ * 
+ */
+package modelo;
+
+import java.io.File;
+import java.io.InputStream;
+import java.security.MessageDigest;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
+import modelo.utils.Traductor;
+
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileItemFactory;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+
+/**
+ * @author adalberto
+ * 
+ */
+public class Producto {
+
+	private List<Precio> precio;
+	private List<Documento> documento;
+	private Archivo archivoLogo;
+	/**
+	 * Identificador del Producto
+	 */
+	private int id;
+	/**
+	 * El nombre del producto
+	 */
+	private String nombre;
+	/**
+	 * Descripción del Producto
+	 */
+	private String descripcion;
+
+	/**
+	 * 
+	 */
+	public Producto(Archivo archivoLogo2, List<Documento> documento2,
+			List<Precio> precio2) {
+		archivoLogo = archivoLogo2;
+		documento = documento2;
+		precio = precio2;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * @param id
+	 *            the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the nombre
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * @param nombre
+	 *            the nombre to set
+	 */
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	/**
+	 * @return the descripcion
+	 */
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	/**
+	 * @param descripcion
+	 *            the descripcion to set
+	 */
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	/**
+	 * @return the documento
+	 */
+	public List<Documento> getDocumento() {
+		return documento;
+	}
+
+	/**
+	 * @return the precio
+	 */
+	public List<Precio> getPrecio() {
+		return precio;
+	}
+
+	/**
+	 * @return the archivoLogo
+	 */
+	public Archivo getArchivoLogo() {
+		return archivoLogo;
+	}
+
+	public static void Agregar(HttpServletRequest request, String filePath,
+			Traductor traductor) throws Exception {
+		// response.setContentType("text/html");
+		// PrintWriter System.out = response.getWriter();
+
+		Map<String, String> campos_valores = new HashMap<String, String>();
+		List<FileItem> fileItemList = new ArrayList<FileItem>();
+		List<File> ficheroList = new ArrayList<File>();
+		List<File> carpetaCrearList = new ArrayList<File>();
+		List<String> md5List = new ArrayList<String>();
+		List<String> nombreOriginalList = new ArrayList<String>();
+
+		System.out.println("Hello<br/>");
+
+		boolean isMultipartContent = ServletFileUpload
+				.isMultipartContent(request);
+		if (!isMultipartContent) {
+			// System.out.println("You are not trying to upload<br/>");
+			return;
+		}
+		System.out.println("You are trying to upload<br/>");
+
+		FileItemFactory factory = new DiskFileItemFactory();
+		ServletFileUpload upload = new ServletFileUpload(factory);
+
+		// try {
+		List<FileItem> fields = upload.parseRequest(request);
+		System.out.println("Number of fields: " + fields.size() + "<br/><br/>");
+		Iterator<FileItem> it = fields.iterator();
+		if (!it.hasNext()) {
+			System.out.println("No fields found");
+			return;
+		}
+		System.out.println("<table border=\"1\">");
+		while (it.hasNext()) {
+			System.out.println("<tr>");
+			FileItem fileItem = it.next();
+			boolean isFormField = fileItem.isFormField();
+			if (isFormField) {
+				System.out
+						.println("<td>regular form field</td><td>FIELD NAME: "
+								+ fileItem.getFieldName() + "<br/>STRING: "
+								+ fileItem.getString());
+				System.out.println("</td>");
+
+				campos_valores.put(fileItem.getFieldName(),
+						fileItem.getString());
+
+			} else {
+				System.out.println("<td>file form field</td><td>FIELD NAME: "
+						+ fileItem.getFieldName() + "<br/>STRING: "
+						+ fileItem.getString() + "<br/>NAME: "
+						+ fileItem.getName() + "<br/>CONTENT TYPE: "
+						+ fileItem.getContentType() + "<br/>SIZE (BYTES): "
+						+ fileItem.getSize() + "<br/>TO STRING: "
+						+ fileItem.toString());
+				System.out.println("</td>");
+
+				System.out.println();
+
+				String fileName = fileItem.getName();
+				// System.System.out.println("Nos han subido el fichero" +
+				// fileName);
+
+				// construimos un objeto file para recuperar el trayecto
+				// completo
+				File fichero = new File(fileName);
+				// depura("El nombre del fichero es " + fichero.getName());
+
+				MessageDigest md = MessageDigest.getInstance("MD5");
+				// FileInputStream fis = new FileInputStream("c:\\loging.log");
+				InputStream fis = fileItem.getInputStream();
+
+				byte[] dataBytes = new byte[1024];
+
+				int nread = 0;
+				while ((nread = fis.read(dataBytes)) != -1) {
+					md.update(dataBytes, 0, nread);
+				}
+				;
+				byte[] mdbytes = md.digest();
+
+				// convert the byte to hex format method 1
+				StringBuffer sb = new StringBuffer();
+				for (int i = 0; i < mdbytes.length; i++) {
+					sb.append(Integer.toString((mdbytes[i] & 0xff) + 0x100, 16)
+							.substring(1));
+				}
+
+				String md5 = sb.toString();
+
+				// Verifico si la carpeta md5 ya existe
+				File f = new File(request.getServletContext().getRealPath(
+						filePath + File.separator + md5));
+
+				md5List.add(md5);
+				nombreOriginalList.add(fileName);
+
+				if (!f.isDirectory()) {
+					fileItemList.add(fileItem);
+					ficheroList.add(fichero);
+					carpetaCrearList.add(f);
+					/*
+					 * if(f.mkdir()){ // nos quedamos solo con el nombre y
+					 * descartamos el path fichero = new
+					 * File(request.getServletContext().getRealPath(filePath +
+					 * File.separator + md5 + File.separator + fileName));
+					 * 
+					 * System.out.println(fichero.getAbsolutePath());
+					 * 
+					 * System.out.println(new
+					 * File(Thread.currentThread().getContextClassLoader()
+					 * .getResource("modelo").getFile()).getAbsolutePath());
+					 * 
+					 * // escribimos el fichero colgando del nuevo path
+					 * fileItem.write(fichero); }else{ throw new
+					 * Exception("Could not make Directory " +
+					 * f.getAbsolutePath()); }
+					 */
+
+				} else {
+					System.out.println("ya existia el archivo");
+					fileItemList.add(null);
+					ficheroList.add(null);
+					carpetaCrearList.add(null);
+				}
+			}
+			System.out.println("</tr>");
+		}a
+		System.out.println("</table>");
+		// } catch (FileUploadException e) {
+		// e.printStackTrace();
+		// } catch (Exception e) {
+		// TODO Auto-generated catch block
+		// e.printStackTrace();
+		// }
+		
+		System.out.println(new
+				  File(Thread.currentThread().getContextClassLoader()
+				  .getResource("modelo").getFile()).getAbsolutePath());
+
+		for (int i = 0; i < fileItemList.size(); i++) {
+			if (fileItemList.get(i) != null) {
+				if(nombreOriginalList.get(i).lastIndexOf(".") >= 0 && nombreOriginalList.get(i).lastIndexOf(".") < nombreOriginalList.get(i).length() - 1){
+					String ext = nombreOriginalList.get(i).substring(
+							nombreOriginalList.get(i).lastIndexOf(".") + 1);
+					
+					System.out.println("Extension = " + ext);
+				}
+			}
+		}
+
+	}
+
+}

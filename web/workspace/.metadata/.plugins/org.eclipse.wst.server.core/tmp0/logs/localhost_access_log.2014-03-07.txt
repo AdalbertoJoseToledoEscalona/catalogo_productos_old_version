@@ -1,0 +1,10 @@
+127.0.0.1 - - [07/Mar/2014:07:09:04 -0430] "GET /catalogo_productos_consola/jsp/index.jsp HTTP/1.1" 200 3796
+127.0.0.1 - - [07/Mar/2014:07:09:04 -0430] "GET /catalogo_productos_consola/css/plantillas/encabezado.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Mar/2014:07:09:04 -0430] "GET /catalogo_productos_consola/css/index.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Mar/2014:07:09:04 -0430] "GET /catalogo_productos_consola/js/utils.js HTTP/1.1" 304 -
+127.0.0.1 - - [07/Mar/2014:07:09:04 -0430] "GET /catalogo_productos_consola/css/utils/errores.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Mar/2014:07:24:49 -0430] "GET /catalogo_productos_consola/jsp/index.jsp HTTP/1.1" 200 3806
+127.0.0.1 - - [07/Mar/2014:07:24:49 -0430] "GET /catalogo_productos_consola/css/plantillas/encabezado.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Mar/2014:07:24:49 -0430] "GET /catalogo_productos_consola/css/index.css HTTP/1.1" 304 -
+127.0.0.1 - - [07/Mar/2014:07:24:49 -0430] "GET /catalogo_productos_consola/js/utils.js HTTP/1.1" 304 -
+127.0.0.1 - - [07/Mar/2014:07:24:49 -0430] "GET /catalogo_productos_consola/css/utils/errores.css HTTP/1.1" 304 -

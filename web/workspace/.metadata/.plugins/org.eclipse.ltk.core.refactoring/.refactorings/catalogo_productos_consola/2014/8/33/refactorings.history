@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;reporte_listado_producto.jsp&apos; to &apos;plantillas&apos;&#x0A;- Original project: &apos;catalogo_productos_consola&apos;&#x0A;- Destination element: &apos;plantillas&apos;&#x0A;- Original element: &apos;reporte_listado_producto.jsp&apos;" description="Copy file" element1="WebContent/jsp/plantillas/reporte_listado_producto.jsp" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1407925844181" target="/catalogo_productos_consola/WebContent/jsp/plantillas" units="0" version="1.0"/>
+</session>

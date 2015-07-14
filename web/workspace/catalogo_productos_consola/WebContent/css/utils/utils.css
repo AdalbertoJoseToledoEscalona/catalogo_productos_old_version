@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+.izquierda{
+	text-align: left;
+}
+
+.centrado{
+	text-align: center;
+}
+
+.derecha{
+	text-align: right;
+}
+
+.justificado{
+	text-align: justify;
+}
+
+.minusculas{
+	text-transform: lowercase;
+}
+
+.mayusculas{
+	text-transform: uppercase;
+}
+
+.tipo_titulo{
+	text-transform: capitalize;
+}

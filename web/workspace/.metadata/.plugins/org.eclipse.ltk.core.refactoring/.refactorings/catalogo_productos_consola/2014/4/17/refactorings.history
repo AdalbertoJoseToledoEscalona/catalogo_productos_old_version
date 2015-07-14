@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;catalogo_productos_consola/WebContent/css/utils/util.css&apos; to &apos;utils.css&apos;" description="Rename resource &apos;util.css&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/css/utils/util.css" name="utils.css" stamp="1398106744415" updateReferences="true"/>
+</session>

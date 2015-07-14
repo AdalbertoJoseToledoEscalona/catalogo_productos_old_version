@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+
+.contenido_caracteristicas {
+	border-style: solid;
+	border-width: thin;
+	border-color: black;
+}
+
+.contenido_precios {
+	border-style: solid;
+	border-width: thin;
+	border-color: black;
+}
+
+.form_autenticacion {
+	text-align: center;
+}
+
+.lbl_usuario {
+    display: inline-block;
+	text-align: right;
+	width: 200px;
+	text-transform: capitalize;
+}
+
+.botones {
+	text-align: center;
+}
+
+.list_img {
+	max-height: 100px;
+	overflow: auto;
+}
+
+.logo {
+	height: 30px;
+}

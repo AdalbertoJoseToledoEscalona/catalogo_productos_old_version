@@ -1,0 +1,41 @@
+http://stackoverflow.com/questions/1265309/eclipse-cannot-find-the-tag-library-descriptor
+
+Eclipse “cannot find the tag library descriptor”
+
+I have a Java EE project which build fine with Ant, deploys perfectly to JBoss, and runs without any trouble. This project includes a few custom tag libraries, which are also working without any difficulties.
+
+The problem is with the Eclipse IDE (Ganymede): in every single JSP file which uses our custom tags, the JSP parser flags the taglib include line with with an error "Cannot find the tag library descriptor for (example).tld"
+
+This also causes every use of the tab library to be flagged as an error, and since the IDE doesn't have their definition, it can't check tag parameters, etc.
+Our perfectly-working JSP files are a sea of red errors, and my eyes are beginning to burn.
+
+How can I simply tell Eclipse "The tag library descriptor you are looking for is "src/web/WEB-INF/(example)-taglib/(example).tld"?
+
+I've already asked this question on the Eclipse support forums, with no helpful results.
+
+
+ANSWER 1
+--------------------------------------------------------------------------
+
+
+In Eclipse Helios "Java EE Module Dependencies" in the project properties has been replaced with "Deployment Assembly".
+
+So for solving this problem with Eclipse Helios, the way I did it is the following:
+
+    Right click on the project in package explorer and choose "Import..."
+    Accept the default selection "File System" and press "Next"
+    Press "Browse" in the From directory line, go to your tomcat installation and locate the file webapps/examples/WEB-INF/lib (I have tomcat 6, other versions of Tomcat may have the path webapps/jsp-examples/WEB-INF/lib). Once in the path press OK.
+    Click besides jstl.jar and standard.jar to activate the check boxes
+    On the line Into folder click on Browse and choose the library folder. I use /lib inside the project.
+    Click "Finish"
+    Right click on the project in Package Explorer view and choose properties (or press Alt + Enter)
+    Click on "Java Build Path"
+    Click "Add Jar", click on your project, folder lib, select jstl.jar, press OK
+    Click "Add Jar", click on your project, folder lib, select standard.jar, press OK
+    Press OK to dismiss the properties dialog
+    Click on the Problems view and select the message "Classpath entry .../jstl.jar will not be exported or published. Runtime ClassNotFoundExceptions may result.".
+    Right click on it and select "Quick Fix".
+    Accept the default "Mark the associated raw classpath entry as a publish/export dependency" and press Finish.
+    Do the same for standard.jar
+
+This solves the problem, but if you want to check what has happened in "Deployment Assembly", open the project properties again, select "Deployment Assembly" and you'll see that standard.jar and jstl.jar have been added to WEB-INF/lib folder.

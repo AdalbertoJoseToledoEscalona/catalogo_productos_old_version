@@ -1,0 +1,75 @@
+/**
+ * 
+ */
+package modelo;
+
+
+/**
+ * @author adalberto
+ *
+ */
+public class Archivo {
+
+	private TipoArchivo tipoArchivo;
+	/**
+	 * El md5 del Archivo
+	 */
+	private String md5;
+	/**
+	 * La ruta del Archivo
+	 */
+	private String ruta;
+
+	/**
+	 * 
+	 */
+	public Archivo(TipoArchivo tipoArchivo2) {
+		tipoArchivo = tipoArchivo2;
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+	public Archivo(TipoArchivo tipoArchivo, String md5, String ruta) {
+		super();
+		this.tipoArchivo = tipoArchivo;
+		this.md5 = md5;
+		this.ruta = ruta;
+	}
+
+	/**
+	 * @return the md5
+	 */
+	public String getMd5() {
+		return md5;
+	}
+
+	/**
+	 * @param md5 the md5 to set
+	 */
+	public void setMd5(String md5) {
+		this.md5 = md5;
+	}
+
+	/**
+	 * @return the ruta
+	 */
+	public String getRuta() {
+		return ruta;
+	}
+
+	/**
+	 * @param ruta the ruta to set
+	 */
+	public void setRuta(String ruta) {
+		this.ruta = ruta;
+	}
+
+	/**
+	 * @return the tipoArchivo
+	 */
+	public TipoArchivo getTipoArchivo() {
+		return tipoArchivo;
+	}
+
+}

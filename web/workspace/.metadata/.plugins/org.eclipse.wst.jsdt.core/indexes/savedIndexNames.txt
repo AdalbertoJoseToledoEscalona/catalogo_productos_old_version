@@ -1,0 +1,9 @@
+INDEX VERSION 1.122+/home/adalberto/proyectos/catalogo_productos/web/workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+644587069.index
+1069407207.index
+2301444290.index
+1957778664.index
+1849981194.index
+3108938815.index
+249597503.index
+1637432500.index

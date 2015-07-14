@@ -1,0 +1,17 @@
+127.0.0.1 - - [24/Aug/2014:11:14:57 -0430] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [24/Aug/2014:11:15:23 -0430] "GET /catalogo_productos_consola/LlenarCmbGrupoEquipoServlet?t=1408895122&usuario=admin&clave=12345678 HTTP/1.1" 200 54
+127.0.0.1 - - [24/Aug/2014:11:15:37 -0430] "POST /catalogo_productos_consola/AutenticarUsuarioServlet HTTP/1.1" 302 -
+127.0.0.1 - - [24/Aug/2014:11:15:37 -0430] "GET /catalogo_productos_consola/jsp/home.jsp HTTP/1.1" 200 3367
+127.0.0.1 - - [24/Aug/2014:11:15:37 -0430] "GET /catalogo_productos_consola/css/home.css HTTP/1.1" 200 60
+127.0.0.1 - - [24/Aug/2014:11:15:37 -0430] "GET /catalogo_productos_consola/js/ajax/set_idioma_pais_ajax.js HTTP/1.1" 200 3236
+127.0.0.1 - - [24/Aug/2014:11:15:37 -0430] "GET /catalogo_productos_consola/css/plantillas/cuerpo.css HTTP/1.1" 200 112
+127.0.0.1 - - [24/Aug/2014:11:15:37 -0430] "GET /catalogo_productos_consola/css/plantillas/botonera_principal.css HTTP/1.1" 200 244
+127.0.0.1 - - [24/Aug/2014:11:15:37 -0430] "GET /catalogo_productos_consola/css/plantillas/ubicacion.css HTTP/1.1" 200 86
+127.0.0.1 - - [24/Aug/2014:11:15:47 -0430] "GET /catalogo_productos_consola/jsp/administrar_documentos_productos.jsp HTTP/1.1" 200 13844
+127.0.0.1 - - [24/Aug/2014:11:15:47 -0430] "GET /catalogo_productos_consola/js/utils/contenido_dinamico.js HTTP/1.1" 200 12202
+127.0.0.1 - - [24/Aug/2014:11:15:47 -0430] "GET /catalogo_productos_consola/js/ajax/reporte.js HTTP/1.1" 200 3458
+127.0.0.1 - - [24/Aug/2014:11:15:47 -0430] "GET /catalogo_productos_consola/css/utils/utils.css HTTP/1.1" 200 291
+127.0.0.1 - - [24/Aug/2014:11:15:47 -0430] "GET /catalogo_productos_consola/css/utils/reportes.css HTTP/1.1" 200 564
+127.0.0.1 - - [24/Aug/2014:11:15:47 -0430] "GET /catalogo_productos_consola/js/utils/reporte.js HTTP/1.1" 200 10496
+127.0.0.1 - - [24/Aug/2014:11:15:48 -0430] "GET /catalogo_productos_consola/contenido/26c67284f95fac1c63901dc830f5842b/index.jpeg HTTP/1.1" 200 12350
+127.0.0.1 - - [24/Aug/2014:11:15:48 -0430] "GET /catalogo_productos_consola/contenido/f5f9488e2af08d1778e7fa84097b3331/logo-leones-del-caracas.jpg HTTP/1.1" 200 14692

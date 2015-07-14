@@ -1,0 +1,1629 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<clay-model clay-version="2.0.1">
+<database-model author="" begin-script="" end-script="" id="507228:14428d23f64:-8000" name="dbModel" sql-dialect-id="jp.azzurri.clay.dialect.MySQL_5_0_Dialect" version="1.0">
+<schema-list>
+<schema id="507228:14428d23f64:-7fff" name="tienda_aplicaciones_servidor">
+<table-list>
+<table id="507228:14428d23f64:-7ffe" name="aplicaciones">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7ffa" mandatory="true" name="id_aplicacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7ff9" mandatory="true" name="nombre">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7ff8" mandatory="false" name="descripcion">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7d8c" mandatory="true" name="ruta_logo">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7d7f" mandatory="true" name="deshabilitado">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7ffd" name="PK_APLICACIONES">
+<primary-key-column name="id_aplicacion"/>
+</primary-key>
+</table>
+<table id="507228:14428d23f64:-7ff6" name="usuarios">
+<column-list>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7ff2" mandatory="true" name="usuario">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7ff1" mandatory="true" name="clave">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7ff0" mandatory="true" name="nombre">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7fef" mandatory="true" name="apellido">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7fee" mandatory="true" name="email">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7427" mandatory="true" name="telefono">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7428" mandatory="true" name="direccion">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7207" mandatory="true" name="codigo_postal">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7eec" mandatory="true" name="bloqueado">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7feb" mandatory="true" name="eliminado">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7ea0" mandatory="true" name="id_tipo_usuario">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7318" mandatory="true" name="id_ciudad">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7ff5" name="PK_USUARIOS">
+<primary-key-column name="usuario"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-7ea2" name="FK_usuarios_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_TIPOS_USUARIOS" referenced-table="tipos_usuarios" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_tipo_usuario" referenced-key-column-name="id_tipo_usuario"/>
+</foreign-key>
+<foreign-key id="507228:14428d23f64:-731a" name="FK_usuarios_2" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_CIUDADES" referenced-table="ciudades" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_ciudad" referenced-key-column-name="id_ciudad"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-7f4b" name="tipos_usuarios">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7f47" mandatory="true" name="id_tipo_usuario">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7f46" mandatory="true" name="nombre">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7f45" mandatory="false" name="descripcion">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7f4a" name="PK_TIPOS_USUARIOS">
+<primary-key-column name="id_tipo_usuario"/>
+</primary-key>
+</table>
+<table id="507228:14428d23f64:-7ee5" name="instaladores">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7ee1" mandatory="true" name="id_instalador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7ee0" mandatory="true" name="nombre">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7edf" mandatory="false" name="descripcion">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7d91" mandatory="false" name="ruta_icono">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7d86" mandatory="true" name="deshabilitado">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7d29" mandatory="true" name="id_aplicacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-730b" mandatory="true" name="precio">
+<data-type name="FLOAT" selected-variant-pattern="FLOAT"/>
+</column>
+<column auto-increment="false" column-size="10" decimal-digits="0" default-value="" id="507228:14428d23f64:-72af" mandatory="true" name="codigo_moneda">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7ee4" name="PK_INSTALADORES">
+<primary-key-column name="id_instalador"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-7d2b" name="FK_instaladores_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_APLICACIONES" referenced-table="aplicaciones" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_aplicacion" referenced-key-column-name="id_aplicacion"/>
+</foreign-key>
+<foreign-key id="507228:14428d23f64:-72b1" name="FK_instaladores_2" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_MONEDAS" referenced-table="monedas" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="codigo_moneda" referenced-key-column-name="codigo_moneda"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-7ede" name="sistemas_operativos">
+<column-list>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7eda" mandatory="true" name="id_sistema_operativo">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7ed9" mandatory="true" name="nombre">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7ed8" mandatory="false" name="descripcion">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7d94" mandatory="false" name="ruta_logo">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7edd" name="PK_SISTEMAS_OPERATIVOS">
+<primary-key-column name="id_sistema_operativo"/>
+</primary-key>
+</table>
+<table id="507228:14428d23f64:-7ed7" name="arquitecturas_sistemas_operativos">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7ed3" mandatory="true" name="id_arquitectura_sistema_operativo">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7ed2" mandatory="true" name="nombre">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7ed1" mandatory="false" name="descripcion">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7ed6" name="PK_ARQUITECTURAS_SISTEMAS_OPERATIVOS">
+<primary-key-column name="id_arquitectura_sistema_operativo"/>
+</primary-key>
+</table>
+<table id="507228:14428d23f64:-7ece" name="compatibilidad_instaladores">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7eca" mandatory="true" name="id_compatibilidad_instalador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7e5b" mandatory="true" name="id_instalador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7db8" mandatory="true" name="id_sistema_operativo">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7d9a" mandatory="false" name="id_arquitectura_sistema_operativo">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7ecd" name="PK_COMPATIBILIDAD_INSTALADORES">
+<primary-key-column name="id_compatibilidad_instalador"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-7e5d" name="FK_compatibilidad_instaladores_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_INSTALADORES" referenced-table="instaladores" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_instalador" referenced-key-column-name="id_instalador"/>
+</foreign-key>
+<foreign-key id="507228:14428d23f64:-7dba" name="FK_compatibilidad_instaladores_2" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_SISTEMAS_OPERATIVOS" referenced-table="sistemas_operativos" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_sistema_operativo" referenced-key-column-name="id_sistema_operativo"/>
+</foreign-key>
+<foreign-key id="507228:14428d23f64:-7d9c" name="FK_compatibilidad_instaladores_3" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_ARQUITECTURAS_SISTEMAS_OPERATIVOS" referenced-table="arquitecturas_sistemas_operativos" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_arquitectura_sistema_operativo" referenced-key-column-name="id_arquitectura_sistema_operativo"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-7c7e" name="licencias">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7c7a" mandatory="true" name="id_licencia">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7c76" mandatory="true" name="numero_equipos">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7c79" mandatory="true" name="dias_validez">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-72ab" mandatory="true" name="precio">
+<data-type name="FLOAT" selected-variant-pattern="FLOAT"/>
+</column>
+<column auto-increment="false" column-size="10" decimal-digits="0" default-value="" id="507228:14428d23f64:-7269" mandatory="true" name="codigo_moneda">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7212" mandatory="true" name="valor_moneda">
+<data-type name="FLOAT" selected-variant-pattern="FLOAT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7c29" mandatory="true" name="id_instalador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7bb2" mandatory="true" name="usuario">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7a35" mandatory="false" name="remote_address">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7a34" mandatory="false" name="remote_host">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7a33" mandatory="false" name="remote_port">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7a32" mandatory="false" name="remote_user">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7c7d" name="PK_LICENCIAS">
+<primary-key-column name="id_licencia"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-7c2b" name="FK_licencias_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_INSTALADORES" referenced-table="instaladores" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_instalador" referenced-key-column-name="id_instalador"/>
+</foreign-key>
+<foreign-key id="507228:14428d23f64:-7bb4" name="FK_licencias_2" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_USUARIOS" referenced-table="usuarios" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="usuario" referenced-key-column-name="usuario"/>
+</foreign-key>
+<foreign-key id="507228:14428d23f64:-726b" name="FK_licencias_3" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_MONEDAS" referenced-table="monedas" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="codigo_moneda" referenced-key-column-name="codigo_moneda"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-7b95" name="cartinfo">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7b8d" mandatory="true" name="idcartinfo">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7b4d" mandatory="true" name="usuario">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7b94" name="PK_CARTINFO">
+<primary-key-column name="idcartinfo"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-7b4f" name="FK_cartinfo_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_USUARIOS" referenced-table="usuarios" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="usuario" referenced-key-column-name="usuario"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-7b13" name="items_cart">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7b0f" mandatory="true" name="id_Item_cart">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7adf" mandatory="true" name="numero_equipos">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7ade" mandatory="true" name="dias_validez">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7aa4" mandatory="true" name="id_instalador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7a53" mandatory="true" name="idcartinfo">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7b12" name="PK_ITEMS_CART">
+<primary-key-column name="id_Item_cart"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-7aa6" name="FK_carts_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_INSTALADORES" referenced-table="instaladores" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_instalador" referenced-key-column-name="id_instalador"/>
+</foreign-key>
+<foreign-key id="507228:14428d23f64:-7a55" name="FK_carts_2" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_CARTINFO" referenced-table="cartinfo" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="idcartinfo" referenced-key-column-name="idcartinfo"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-7a40" name="equipos">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7a3c" mandatory="true" name="id_equipo">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="111dc24:1444488e0f2:-736a" mandatory="true" name="direccion">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="111dc24:1444488e0f2:-7333" mandatory="true" name="id_ciudad">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="111dc24:1444488e0f2:-7369" mandatory="true" name="codigo_postal">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7a3b" mandatory="false" name="canonical_host_name">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7a3a" mandatory="false" name="host_address">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-78f9" mandatory="false" name="host_name">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78f8" mandatory="false" name="is_any_local_address">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78f7" mandatory="false" name="is_link_local_address">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78f6" mandatory="false" name="is_loopback_address">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78f5" mandatory="false" name="is_mc_global">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78f4" mandatory="false" name="is_mc_link_local">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78f3" mandatory="false" name="is_mc_node_local">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78f2" mandatory="false" name="is_mc_org_local">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78f1" mandatory="false" name="is_mc_site_local">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78f0" mandatory="false" name="is_multicast_address">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78ef" mandatory="false" name="is_site_local_address">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78ee" mandatory="false" name="is_ipv4">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78ed" mandatory="false" name="is_ipv6">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7a3f" name="PK_EQUIPOS">
+<primary-key-column name="id_equipo"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="111dc24:1444488e0f2:-7335" name="FK_equipos_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_CIUDADES" referenced-table="ciudades" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_ciudad" referenced-key-column-name="id_ciudad"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-7a2f" name="descargas">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7a2b" mandatory="true" name="id_descarga">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7a14" mandatory="true" name="id_licencia">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7a02" mandatory="false" name="remote_address">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7a01" mandatory="false" name="remote_host">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7a00" mandatory="false" name="remote_port">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-79ff" mandatory="false" name="remote_user">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7a2e" name="PK_DESCARGAS">
+<primary-key-column name="id_descarga"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-7a16" name="FK_descargas_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_LICENCIAS" referenced-table="licencias" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_licencia" referenced-key-column-name="id_licencia"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-79fe" name="instalaciones">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-79fc" mandatory="true" name="id_instalacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-79fa" mandatory="true" name="id_licencia">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-79f9" mandatory="false" name="remote_address">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-79f8" mandatory="false" name="remote_host">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-79f7" mandatory="false" name="remote_port">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-79f6" mandatory="false" name="remote_user">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-790f" mandatory="true" name="id_equipo">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-79f5" name="PK_INSTALACIONES">
+<primary-key-column name="id_instalacion"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-79db" name="FK_instalaciones_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_LICENCIAS" referenced-table="licencias" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_licencia" referenced-key-column-name="id_licencia"/>
+</foreign-key>
+<foreign-key id="507228:14428d23f64:-7911" name="FK_instalaciones_2" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_EQUIPOS" referenced-table="equipos" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_equipo" referenced-key-column-name="id_equipo"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-78d6" name="network_interfaces">
+<column-list>
+<column auto-increment="false" column-size="17" decimal-digits="0" default-value="" id="507228:14428d23f64:-78d4" mandatory="true" name="hardware_address">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-78d3" mandatory="false" name="display_name">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78d2" mandatory="false" name="index_hardware">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78d1" mandatory="false" name="mtu">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-78d0" mandatory="false" name="name">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78ce" mandatory="false" name="is_loopback">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78cf" mandatory="false" name="is_point_to_point">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78cd" mandatory="false" name="is_up">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78cc" mandatory="false" name="is_virtual">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-78cb" mandatory="false" name="supports_multicast">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-785f" mandatory="true" name="id_equipo">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-78c4" name="PK_NETWORK_INTERFACES">
+<primary-key-column name="hardware_address"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-7861" name="FK_network_interfaces_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_EQUIPOS" referenced-table="equipos" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_equipo" referenced-key-column-name="id_equipo"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-7832" name="inet_addresses">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7830" mandatory="true" name="id_inet_addresses">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-782f" mandatory="false" name="canonical_host_name">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-782e" mandatory="false" name="host_address">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-782d" mandatory="false" name="host_name">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-782c" mandatory="false" name="is_any_local_address">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-782b" mandatory="false" name="is_link_local_address">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-782a" mandatory="false" name="is_loopback_address">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7829" mandatory="false" name="is_mc_global">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7828" mandatory="false" name="is_mc_link_local">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7827" mandatory="false" name="is_mc_node_local">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7826" mandatory="false" name="is_mc_org_local">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7825" mandatory="false" name="is_mc_site_local">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7824" mandatory="false" name="is_multicast_address">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7823" mandatory="false" name="is_site_local_address">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7822" mandatory="false" name="is_ipv4">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7821" mandatory="false" name="is_ipv6">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="17" decimal-digits="0" default-value="" id="507228:14428d23f64:-7773" mandatory="true" name="hardware_address">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7820" name="PK_INET_ADDRESSES">
+<primary-key-column name="id_inet_addresses"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-7775" name="FK_inet_addresses_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_NETWORK_INTERFACES" referenced-table="network_interfaces" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="hardware_address" referenced-key-column-name="hardware_address"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-7721" name="archivos_aplicaciones">
+<column-list>
+<column auto-increment="false" column-size="32" decimal-digits="0" default-value="" id="507228:14428d23f64:-771d" mandatory="true" name="md5_archivo_aplicacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-771c" mandatory="true" name="ruta">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-76ee" mandatory="true" name="id_tipo_archivo">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7720" name="PK_ARCHIVOS_APLICACIONES">
+<primary-key-column name="md5_archivo_aplicacion"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-76f0" name="FK_archivos_aplicaciones_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_TIPOS_ARCHIVOS" referenced-table="tipos_archivos" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_tipo_archivo" referenced-key-column-name="id_tipo_archivo"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-771a" name="tipos_archivos">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7716" mandatory="true" name="id_tipo_archivo">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7715" mandatory="true" name="nombre">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7714" mandatory="false" name="descripcion">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7719" name="PK_TIPOS_ARCHIVOS">
+<primary-key-column name="id_tipo_archivo"/>
+</primary-key>
+</table>
+<table id="507228:14428d23f64:-7619" name="aplicaciones_x_archivos">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7615" mandatory="true" name="id_aplicaciones_x_archivos">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-75e1" mandatory="true" name="id_aplicacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="32" decimal-digits="0" default-value="" id="507228:14428d23f64:-75af" mandatory="true" name="md5_archivo_aplicacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7618" name="PK_APLICACIONES_X_ARCHIVOS">
+<primary-key-column name="id_aplicaciones_x_archivos"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-75e3" name="FK_aplicaciones_x_archivos_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_APLICACIONES" referenced-table="aplicaciones" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_aplicacion" referenced-key-column-name="id_aplicacion"/>
+</foreign-key>
+<foreign-key id="507228:14428d23f64:-75b1" name="FK_aplicaciones_x_archivos_2" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_ARCHIVOS_APLICACIONES" referenced-table="archivos_aplicaciones" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="md5_archivo_aplicacion" referenced-key-column-name="md5_archivo_aplicacion"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-759b" name="extensiones">
+<column-list>
+<column auto-increment="false" column-size="4" decimal-digits="0" default-value="" id="507228:14428d23f64:-7597" mandatory="true" name="extension">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7596" mandatory="true" name="nombre">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7595" mandatory="false" name="descripcion">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-759a" name="PK_EXTENSIONES">
+<primary-key-column name="extension"/>
+</primary-key>
+</table>
+<table id="507228:14428d23f64:-7592" name="tipos_archivos_x_extensiones">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-758e" mandatory="true" name="id_tipos_archivos_x_extensiones">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-758d" mandatory="true" name="fecha_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-753d" mandatory="true" name="id_tipo_archivo">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="4" decimal-digits="0" default-value="" id="507228:14428d23f64:-74f7" mandatory="true" name="extension">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7591" name="PK_TIPOS_ARCHIVOS_X_EXTENSIONES">
+<primary-key-column name="id_tipos_archivos_x_extensiones"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-753f" name="FK_tipos_archivos_x_extensiones_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_TIPOS_ARCHIVOS" referenced-table="tipos_archivos" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_tipo_archivo" referenced-key-column-name="id_tipo_archivo"/>
+</foreign-key>
+<foreign-key id="507228:14428d23f64:-74f9" name="FK_tipos_archivos_x_extensiones_2" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_EXTENSIONES" referenced-table="extensiones" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="extension" referenced-key-column-name="extension"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-74ab" name="videos_youtube">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7474" mandatory="true" name="id_video_youtube">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-74a7" mandatory="true" name="url_youtube">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-74a6" mandatory="true" name="nombre">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-74a5" mandatory="false" name="descripcion">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7430" mandatory="true" name="id_aplicacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-74aa" name="PK_VIDEOS_YOUTUBE">
+<primary-key-column name="id_video_youtube"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-7432" name="FK_videos_youtube_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_APLICACIONES" referenced-table="aplicaciones" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_aplicacion" referenced-key-column-name="id_aplicacion"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-7422" name="paises">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-741e" mandatory="true" name="id_pais">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-741d" mandatory="true" name="nombre">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="2" decimal-digits="0" default-value="" id="507228:14428d23f64:-741c" mandatory="false" name="codigo">
+<data-type name="CHAR" selected-variant-pattern="CHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-73d9" mandatory="true" name="deshabilitado">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7421" name="PK_PAISES">
+<primary-key-column name="id_pais"/>
+</primary-key>
+</table>
+<table id="507228:14428d23f64:-741b" name="estados">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7417" mandatory="true" name="id_estado">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7416" mandatory="true" name="nombre">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-73d6" mandatory="true" name="deshabilitado">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-73ef" mandatory="true" name="id_pais">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-741a" name="PK_ESTADOS">
+<primary-key-column name="id_estado"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-73f1" name="FK_estados_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_PAISES" referenced-table="paises" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_pais" referenced-key-column-name="id_pais"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-73e8" name="ciudades">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-73e4" mandatory="true" name="id_ciudad">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-73d3" mandatory="true" name="nombre">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-73d1" mandatory="true" name="deshabilitado">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-73b3" mandatory="true" name="id_estado">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-73e7" name="PK_CIUDADES">
+<primary-key-column name="id_ciudad"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="507228:14428d23f64:-73b5" name="FK_ciudades_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_ESTADOS" referenced-table="estados" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_estado" referenced-key-column-name="id_estado"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="507228:14428d23f64:-730a" name="monedas">
+<column-list>
+<column auto-increment="false" column-size="10" decimal-digits="0" default-value="" id="507228:14428d23f64:-7306" mandatory="true" name="codigo_moneda">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="507228:14428d23f64:-7305" mandatory="true" name="nombre">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7302" mandatory="true" name="valor">
+<data-type name="FLOAT" selected-variant-pattern="FLOAT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7304" mandatory="true" name="deshabilitado">
+<data-type name="BOOLEAN" selected-variant-pattern="BOOLEAN"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="507228:14428d23f64:-7309" name="PK_MONEDAS">
+<primary-key-column name="codigo_moneda"/>
+</primary-key>
+</table>
+<table id="ed32df:144374b8013:-7cd1" name="pertenencia_datos">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7ccd" mandatory="true" name="id_pertenencia_datos">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7ccc" mandatory="true" name="tabla">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7ccb" mandatory="true" name="id_clave_tabla">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7cca" mandatory="false" name="id_equipo">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="ed32df:144374b8013:-7cd0" name="PK_PERTENENCIA_DATOS">
+<primary-key-column name="id_pertenencia_datos"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="ed32df:144374b8013:-7c6a" name="FK_pertenencia_datos_1" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_EQUIPOS" referenced-table="equipos" referenced-table-schema="tienda_aplicaciones_servidor" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="id_equipo" referenced-key-column-name="id_equipo"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table id="ed32df:144374b8013:-7c3f" name="cambios_bd">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7c3b" mandatory="true" name="id_cambio_bd">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7c3a" mandatory="true" name="tabla">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7c39" mandatory="true" name="accion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7c38" mandatory="false" name="campos">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7c37" mandatory="false" name="valores_viejos">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7c36" mandatory="false" name="valores_nuevos">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7c35" mandatory="false" name="condicion">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7c34" mandatory="false" name="sentencias">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="ed32df:144374b8013:-7c3e" name="PK_CAMBIOS_BD">
+<primary-key-column name="id_cambio_bd"/>
+</primary-key>
+</table>
+<table id="ed32df:144374b8013:-7be0" name="servidores">
+<column-list>
+<column auto-increment="true" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7bdc" mandatory="true" name="id_servidor">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7bdb" mandatory="true" name="nombre_servidor">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7bda" mandatory="true" name="url">
+<data-type name="TEXT" selected-variant-pattern="TEXT"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7bd9" mandatory="false" name="puerto">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7bd8" mandatory="false" name="protocolo">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="507228:14428d23f64:-7756" mandatory="true" name="fecha_hora_creacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6b" mandatory="false" name="fecha_hora_actualizacion">
+<data-type name="DATETIME" selected-variant-pattern="DATETIME"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f66" mandatory="false" name="id_usuario_creador">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f65" mandatory="false" name="id_usuario_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f6a" mandatory="false" name="id_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f69" mandatory="false" name="id_equipo_origen">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7f64" mandatory="false" name="id_equipo_actualizacion">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d22" mandatory="true" name="usuario_bd_creador">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column auto-increment="false" column-size="100" decimal-digits="0" default-value="" id="ed32df:144374b8013:-7d21" mandatory="false" name="usuario_bd_actualizacion">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="ed32df:144374b8013:-7bdf" name="PK_SERVIDORES">
+<primary-key-column name="id_servidor"/>
+</primary-key>
+</table>
+</table-list>
+</schema>
+</schema-list>
+</database-model>
+<diagram>
+<table-figure refid="507228:14428d23f64:-7ffe" x="1621" y="241"/>
+<table-figure refid="507228:14428d23f64:-7ff6" x="51" y="16"/>
+<table-figure refid="507228:14428d23f64:-7f4b" x="621" y="276"/>
+<table-figure refid="507228:14428d23f64:-7ee5" x="412" y="698"/>
+<table-figure refid="507228:14428d23f64:-7ede" x="1622" y="13"/>
+<table-figure refid="507228:14428d23f64:-7ed7" x="906" y="1405"/>
+<table-figure refid="507228:14428d23f64:-7ece" x="758" y="501"/>
+<table-figure refid="507228:14428d23f64:-7c7e" x="36" y="406"/>
+<table-figure refid="507228:14428d23f64:-7b95" x="368" y="461"/>
+<table-figure refid="507228:14428d23f64:-7b13" x="1027" y="806"/>
+<table-figure refid="507228:14428d23f64:-7a40" x="52" y="1197"/>
+<table-figure refid="507228:14428d23f64:-7a2f" x="1617" y="839"/>
+<table-figure refid="507228:14428d23f64:-79fe" x="12" y="844"/>
+<table-figure refid="507228:14428d23f64:-78d6" x="650" y="1072"/>
+<table-figure refid="507228:14428d23f64:-7832" x="611" y="1503"/>
+<table-figure refid="507228:14428d23f64:-7721" x="1311" y="600"/>
+<table-figure refid="507228:14428d23f64:-771a" x="1304" y="986"/>
+<table-figure refid="507228:14428d23f64:-7619" x="962" y="271"/>
+<table-figure refid="507228:14428d23f64:-759b" x="1275" y="1637"/>
+<table-figure refid="507228:14428d23f64:-7592" x="1257" y="1348"/>
+<table-figure refid="507228:14428d23f64:-74ab" x="1630" y="562"/>
+<table-figure refid="507228:14428d23f64:-7422" x="1265" y="3"/>
+<table-figure refid="507228:14428d23f64:-741b" x="852" y="1"/>
+<table-figure refid="507228:14428d23f64:-73e8" x="422" y="23"/>
+<table-figure refid="507228:14428d23f64:-730a" x="331" y="1069"/>
+<table-figure refid="ed32df:144374b8013:-7cd1" x="70" y="1695"/>
+<table-figure refid="ed32df:144374b8013:-7c3f" x="88" y="1955"/>
+<table-figure refid="ed32df:144374b8013:-7be0" x="623" y="1969"/>
+</diagram>
+</clay-model>

@@ -1,0 +1,167 @@
+<%@page import="modelo.Moneda"%>
+<%@page import="modelo.Precio"%>
+<%@page import="modelo.Caracteristica"%>
+<%@page import="modelo.ArchivoGrupoEquipo"%>
+<%@page import="java.util.List"%>
+<%@page import="modelo.GrupoEquipo"%>
+<%@page import="modelo.Usuario"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@page import="modelo.utils.Traductor"%>
+<%@include file="plantillas/obj_idioma.jsp"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title><%=traductor.traducir("agregar_producto")%></title>
+<link type="text/css" rel="StyleSheet"
+	href="../css/plantillas/encabezado.css">
+<link type="text/css" rel="StyleSheet"
+	href="../css/plantillas/botonera_principal.css">
+<link type="text/css" rel="StyleSheet"
+	href="../css/plantillas/ubicacion.css">
+<link type="text/css" rel="StyleSheet" href="../css/utils/errores.css">
+<link type="text/css" rel="StyleSheet" href="../css/utils/utils.css">
+
+<link type="text/css" rel="StyleSheet"
+	href="../css/agregar_producto.css">
+
+<script type="text/javascript" src="../js/utils/utils.js"></script>
+<script type="text/javascript" src="../js/utils/cookies.js"></script>
+<script type="text/javascript" src="../js/utils/contenido_dinamico.js"></script>
+<script type="text/javascript" src="../js/plantillas/idioma_pais.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+
+<script type="text/javascript" src="../js/ajax/set_idioma_pais_ajax.js"></script>
+
+<%@include file="scripts/validaciones.jsp"%>
+</head>
+<body>
+	<%
+		Usuario usuario = (Usuario) session.getAttribute("usuario");
+		GrupoEquipo grupoEquipo = (GrupoEquipo) session
+				.getAttribute("grupoEquipo");
+	%>
+	<%@include file="plantillas/encabezado.jsp"%>
+	<%@include file="plantillas/botonera_principal.jsp"%>
+	<div id="cuerpo">
+		<div>
+			<span class="ubicacion"><b><%=traductor.traducir("home")%></b></span>
+			<div class="grupo_equipos">
+				<b><%=traductor.traducir("grupo_de_equipos")%>:</b>
+				<%=grupoEquipo.getNombre()%></div>
+		</div>
+		<!-- <center>  -->
+		<div style="text-align: center; margin: auto;">
+			<h2><%=traductor.traducir("mensaje_agregar_producto")%></h2>
+
+			<table style="margin: auto;">
+				<tr>
+					<th class="lbl_usuario"><%=traductor.traducir("logotipo") %>:</th>
+					<td align="left"><input type="file"
+						name="logotipo_norequerido">
+						<div class="list_img">
+							<table>
+								<%
+									List<ArchivoGrupoEquipo> archivoGrupoEquipos = grupoEquipo
+											.getArchivoGrupoEquipoPorTipoArchivo(new String[] { "img" });
+									for (int i = 0; i < archivoGrupoEquipos.size(); i++) {
+								%>
+								<tr>
+									<th><input type="radio" name="radio_logo"
+										value="<%=archivoGrupoEquipos.get(i).getArchivo().getMd5()%>">
+									</th>
+									<th><img alt="logo1"
+										src="<%=archivoGrupoEquipos.get(i).getArchivo().getRuta()%>"
+										class="logo"></th>
+									<td><%=archivoGrupoEquipos.get(i).getNombreOriginal()%></td>
+								</tr>
+								<%
+									}
+								%>
+							</table>
+						</div></td>
+				</tr>
+				<tr>
+					<th class="lbl_usuario"><%=traductor.traducir("nombre") %>:</th>
+					<td align="left"><input type="text" name="nombre"></td>
+				</tr>
+				<tr>
+					<th class="lbl_usuario"><%=traductor.traducir("descripcion") %>:</th>
+					<td align="left"><textarea name="descripcion"></textarea></td>
+				</tr>
+				<tr>
+					<% List<Caracteristica> caracteristicas = Caracteristica
+									.getCaracteristicas(); %>
+					<th class="lbl_usuario"><%=traductor.traducir("caracteristicas") %>:</th>
+					<td align="left"><a
+						href="javascript:agregarContenidoDinamico(0);"><%=traductor.traducir("agregar") %></a>
+						<a href="javascript:quitarContenidoDinamico(0);"><%=traductor.traducir("quitar") %></a>
+						<div id="campos_caracteristicas"></div></td>
+				</tr>
+				<tr>
+					<% List<Moneda> monedas = Moneda.getMonedas(); %>
+					<th class="lbl_usuario"><%=traductor.traducir("precios") %>:</th>
+					<td align="left"><a
+						href="javascript:agregarContenidoDinamico(1);"><%=traductor.traducir("agregar") %></a>
+						<a href="javascript:quitarContenidoDinamico(1);"><%=traductor.traducir("quitar") %></a>
+						<div id="campos_precios"></div></td>
+				</tr>
+			</table>
+		</div>
+		<!-- </center> -->
+	</div>
+
+	<script type="text/javascript">
+		minContenido[0] = 0;
+		numContenido[0] = 0;
+		idDivContenedor[0] = "campos_caracteristicas";
+		htmlContenido[0] = "<div class=\"contenido_caracteristicas\">" + 
+		"<div>"+
+		"<select id=\"caracteristica_numContenido\" name=\"caracteristica_numContenido\">"
+				+ "<option value=\"\"><%=traductor.traducir("seleccione_una_caracteristica") %></option>" +
+				
+			<%
+				for (int i = 0; i < caracteristicas.size(); i++) {
+			%>
+				"<option value=\"<%=caracteristicas.get(i).getId()%>\"><%=caracteristicas.get(i).getNombre()%>"+
+		"</option>"+
+	<%}%>
+		"</select>"+
+		"<input id=\"nueva_categoria_numContenido\" type=\"text\" name=\"nueva_categoria_numContenido\" style=\"visibility: hidden; display: none; width: 0px; height: 0px;\">"+
+		
+		"<input type=\"checkbox\" name=\"es_nueva_categoria_numContenido\" onchange=\"ocultarMostrar(this, new Array('caracteristica_numContenido'), new Array('nueva_categoria_numContenido'));\"> <%=traductor.traducir("nueva_preguntando") %>"+
+		"</div>"
+		+"<div><%=traductor.traducir("valor") %>: <input type=\"text\" name=\"valor_caracteristica_numContenido\">"
+				+ "</div></div>";
+				
+				
+		minContenido[1] = 0;
+		numContenido[1] = 0;
+		idDivContenedor[1] = "campos_precios";	
+		htmlContenido[1] = "<div class=\"contenido_precios\">"+
+			"<div class=\"tipo_titulo\">"+
+		"<%=traductor.traducir("nombre") %>: <input type=\"text\" name=\"nombre_precio_numContenido\">"+
+	"</div>"+
+	"<div class=\"tipo_titulo\">"+
+		"<%=traductor.traducir("valor") %>: <input type=\"number\" step=\"any\" name=\"valor_precio_numContenido\""+
+			"onkeypress=\"return soloNumerosConDecimales(event);\">"+
+	"</div>"+
+	"<div class=\"tipo_titulo\">"+
+		"<%=traductor.traducir("moneda") %>: <select id=\"moneda_numContenido\" name=\"moneda_numContenido\">"+
+			"<option value=\"\">Seleccione una Moneda</option>"+
+		<%for(int i = 0; i < monedas.size(); i++){ %>
+			"<option value=\"<%=monedas.get(i).getCodigo()%>\"><%=monedas.get(i).getNombre()%>"
+				+ "</option>" +
+	<%}%>
+		"</select>"
+				+ "<div id=\"div_nueva_moneda\" style=\"visibility: hidden; display: none; width: 0px; height: 0px;\">"
+				+ "<div class=\"tipo_titulo\"><%=traductor.traducir("codigo_moneda")%>: <input type=\"text\" name=\"codigo_nueva_moneda_numContenido\" size=\"6\" maxlength=\"10\"></div>"
+				+ "<div class=\"tipo_titulo\"><%=traductor.traducir("nombre_moneda")%>: <input type=\"text\" name=\"nombre_nueva_moneda_numContenido\"></div>"
+				+ "<div class=\"tipo_titulo\"><%=traductor.traducir("valor_moneda")%>: <input type=\"number\" name=\"valor_nueva_moneda_numContenido\" onkeypress=\"return soloNumerosConDecimales(event);\"></div></div>"
+
+				+ "<input type=\"checkbox\" name=\"es_nueva_moneda_numContenido\" onchange=\"ocultarMostrar(this, Array('moneda_numContenido'), Array('div_nueva_moneda'));\"> <%=traductor.traducir("nueva_preguntando") %>"
+				+ "</div>" + "</div>";
+	</script>
+</body>
+</html>

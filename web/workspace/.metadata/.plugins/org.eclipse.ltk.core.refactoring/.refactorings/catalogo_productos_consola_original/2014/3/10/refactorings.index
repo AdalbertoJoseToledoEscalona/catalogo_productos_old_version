@@ -1,0 +1,19 @@
+1394104564130	Delete element
+1394104585879	Rename resource 'objIdioma.jsp'
+1394300017075	Rename resource 'web.xml'
+1394300043853	Copy file
+1394300893152	Rename resource 'web.xml'
+1394300899757	Rename resource 'web_original.xml'
+1394309573164	Move 'cookies.js' to 'utils'
+1394309592879	Move 1 resources to 'plantillas'
+1394309656089	Delete element
+1394310202516	Rename resource 'eliminar_banners.js'
+1394311447384	Rename type 'VerificarLicencia'
+1394311520289	Rename resource 'llenar_cmb_grupo_equipos.js'
+1394312247462	Move 1 resources to 'js'
+1394312576394	Delete element
+1394315646746	Encapsulate field 'grupoEquipo'
+1394316438302	Encapsulate field 'idiomaPais'
+1394316527143	Encapsulate field 'idiomaPais'
+1394316679803	Rename type 'DB'
+1394316975397	Encapsulate field 'grupoEquipo'

@@ -1,0 +1,11 @@
+127.0.0.1 - - [08/Feb/2014:16:24:58 -0430] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [08/Feb/2014:16:25:03 -0430] "GET /catalogo_productos_consola/index.jsp HTTP/1.1" 200 264
+127.0.0.1 - - [08/Feb/2014:16:25:03 -0430] "GET /favicon.ico HTTP/1.1" 404 973
+127.0.0.1 - - [08/Feb/2014:16:25:03 -0430] "GET /favicon.ico HTTP/1.1" 404 973
+127.0.0.1 - - [08/Feb/2014:16:25:50 -0430] "GET /catalogo_productos_consola/index.jsp HTTP/1.1" 200 261
+127.0.0.1 - - [08/Feb/2014:16:27:26 -0430] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [08/Feb/2014:16:27:28 -0430] "GET /catalogo_productos_consola/index.jsp HTTP/1.1" 200 261
+127.0.0.1 - - [08/Feb/2014:17:34:58 -0430] "GET /catalogo_productos_consola/index.jsp HTTP/1.1" 200 261
+127.0.0.1 - - [08/Feb/2014:18:30:33 -0430] "GET /catalogo_productos_consola/index.jsp HTTP/1.1" 200 261
+127.0.0.1 - - [08/Feb/2014:18:30:49 -0430] "GET /catalogo_productos_consola/index.jsp HTTP/1.1" 200 261
+127.0.0.1 - - [08/Feb/2014:18:30:51 -0430] "GET /catalogo_productos_consola/index.jsp HTTP/1.1" 200 261

@@ -1,0 +1,12 @@
+
+<div class="encabezado">
+	<div class="texto_encabezado">
+		<div class="titulo_encabezado">CATALOGO MT</div>
+		<div class="subtitulo_encabezado">Consola Administrativa</div>
+	</div>
+	<div class="select_idiomas">
+		<select id="select_idioma">
+			<option></option>
+		</select>
+	</div>
+</div>

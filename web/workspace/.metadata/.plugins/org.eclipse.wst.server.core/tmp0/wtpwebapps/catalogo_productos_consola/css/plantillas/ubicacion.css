@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+.ubicacion {
+	float: left;
+}
+
+.grupo_equipos {
+	text-align: right;
+}
